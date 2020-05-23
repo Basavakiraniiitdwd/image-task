@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Simple Chat UI</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section class="msger">
+  <header class="msger-header">
+    <div class="msger-header-title">
+      <i class="fas fa-comment-alt"></i> SimpleChat
+    </div>
+    <div class="msger-header-options">
+      <span><i class="fas fa-cog"></i></span>
+    </div>
+  </header>
+
+  <main class="msger-chat">
+    <div class="msg left-msg">
+      <div  class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
+      ></div>
+
+      <div class="msg-bubble">
+        <div class="msg-info">
+          <div class="msg-info-name">BOT</div>
+          <div class="msg-info-time">12:45</div>
+        </div>
+
+        <div class="msg-text">
+          Hi, welcome to SimpleChat! Go ahead and send me a message. 😄
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <form class="msger-inputarea">
+    <input type="text" class="msger-input" placeholder="Enter your message...">
+    <button type="submit" class="msger-send-btn">Send</button>
+  </form>
+</section>
+
+<script type="text/javascript">
+  
+  // var x= createElementByClassName("msg left-msg")
+
+  function getmsg(side,chatname,timewhen,chatmsg){
+
+
+
+  var parent1 = document.getElementsByClassName("msger-chat")[0];
+  var para1 = document.createElement("div");  
+  para1.setAttribute("class","msg "+side+"-msg");
+  parent1.appendChild(para1);
+
+  var para2a = document.createElement("div");  
+  para2a.style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)";
+  para2a.setAttribute("class","msg-img");
+  para1.appendChild(para2a);
+
+   var para2b = document.createElement("div");    
+  para2b.setAttribute("class","msg-bubble");
+  para1.appendChild(para2b);
+
+  var para2b1 = document.createElement("div");  
+  para2b1.setAttribute("class","msg-info");
+  para2b.appendChild(para2b1);
+
+  var para2b1a = document.createElement("div");  
+  para2b1a.setAttribute("class","msg-info-name");
+  para2b1a.innerText = chatname;
+  para2b1.appendChild(para2b1a);
+
+  var para2b1b = document.createElement("div");  
+  para2b1b.setAttribute("class","msg-info-time");
+  para2b1b.innerText = timewhen;
+  para2b1.appendChild(para2b1b);
+
+  var para2b2 = document.createElement("div");  
+  para2b2.setAttribute("class","msg-text");
+  para2b2.innerText = chatmsg;
+  para2b.appendChild(para2b2);
+    // body...
+  }
+
+
+
+
+</script>
+<!-- partial -->
+  <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
